@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: white;
+      color: #2575fc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #eee;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .typed-text {
+      color: #ffd700;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Bem-vindo ao meu site</h1>
+    <div class="typed-text" id="typed"></div>
+    <p>Um site profissional, animado e criado com HTML, CSS e JavaScript puro.</p>
+    <button onclick="mostrarAlerta()">Clique para interagir</button>
+  </section>
+
+  <section id="sobre">
+    <h1>Sobre Mim</h1>
+    <p>Sou um desenvolvedor apaixonado por criar experiências digitais incríveis, com foco em animações, interatividade e performance.</p>
+  </section>
+
+  <section id="contato">
+    <h1>Contato</h1>
+    <p>Você pode me encontrar no GitHub, LinkedIn ou enviar um e-mail. Em breve adicionarei um formulário de contato interativo aqui!</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Meu Nome. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JS: Typed text + scroll animations -->
+  <script>
+    const frases = [
+      "Desenvolvedor Web",
+      "Criador de Experiências Digitais",
+      "Apaixonado por Código 💻",
+      "Bem-vindo ao meu mundo 🌍"
+    ];
+    let i = 0, j = 0, texto = '', apagando = false;
+
+    function digitar() {
+      const elemento = document.getElementById
